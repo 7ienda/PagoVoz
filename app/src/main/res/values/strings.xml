@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PagoVoz</string>
+    <string name="onboarding_title">Bienvenido a PagoVoz</string>
+    <string name="onboarding_desc">Anuncia por voz cada pago que recibas en Yape, Plin, Tunki y más, incluso con la pantalla bloqueada.</string>
+</resources>
