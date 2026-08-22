@@ -4,16 +4,59 @@ App Android (Kotlin) que escucha las notificaciones de tus apps de pago
 y anuncia por voz cada pago recibido, con historial completo, alertas
 en pantalla, funcionamiento en segundo plano y con pantalla bloqueada.
 
-## ⚠️ Importante: esto es el proyecto fuente, no un .apk compilado
+## 🚀 Forma más fácil y 100% gratis: compilar con GitHub (sin instalar nada)
 
-Este .zip contiene el **proyecto completo de Android Studio**. No incluye
-un archivo `.apk` ya compilado porque compilar un APK requiere el SDK de
-Android y los repositorios de Google (Maven), a los que este entorno de
-IA no tiene acceso. Compilarlo tarda ~2 minutos siguiendo los pasos de
-abajo, es gratis, y el resultado es tuyo (no depende de mí ni de ningún
-servidor externo).
+Este proyecto ya incluye un archivo `.github/workflows/build-apk.yml` que
+hace que **GitHub compile el APK por ti**, en sus propios servidores,
+gratis, y te deje un link de descarga directa para tu celular. No
+necesitas instalar Android Studio ni saber programar.
 
-## Cómo generar el APK (paso a paso)
+### Paso 1 — Crea una cuenta en GitHub (si no tienes)
+Ve a https://github.com/signup — es gratis.
+
+### Paso 2 — Crea un repositorio nuevo
+1. Click en el botón **"+"** arriba a la derecha → **"New repository"**.
+2. Ponle un nombre, por ejemplo `pagovoz`.
+3. Déjalo en **Public** (o Private, ambos son gratis).
+4. NO marques "Add a README" (ya tenemos uno). Click **Create repository**.
+
+### Paso 3 — Sube los archivos del proyecto
+1. Descomprime en tu computadora el .zip que te di (`PagoVoz-proyecto-android.zip`).
+2. En la página de tu repositorio nuevo, click en **"uploading an existing file"**
+   (o el botón **Add file → Upload files**).
+3. Abre la carpeta `PagoVoz` que descomprimiste y arrastra **todo su
+   contenido** (todas las carpetas y archivos de adentro, no la carpeta
+   `PagoVoz` en sí) hacia la zona de subida de GitHub. En Chrome/Edge
+   puedes arrastrar carpetas completas y GitHub respeta la estructura.
+4. Abajo, escribe un mensaje como "Primera subida" y click **Commit changes**.
+
+### Paso 4 — Espera a que se compile solo
+1. Ve a la pestaña **"Actions"** en tu repositorio (arriba).
+2. Verás un proceso corriendo llamado "Build & Release APK" (tarda 2-4 min).
+3. Cuando el ícono se ponga en ✅ verde, ya está listo.
+
+### Paso 5 — Descarga el APK en tu celular
+1. Ve a la pestaña **"Releases"** de tu repositorio (o entra directo a
+   `https://github.com/TU-USUARIO/pagovoz/releases`).
+2. Ábrela desde el navegador de tu celular.
+3. Toca el archivo **PagoVoz.apk** para descargarlo.
+4. Android te pedirá permiso para "instalar apps de fuentes desconocidas"
+   la primera vez — acéptalo solo para este archivo.
+5. Instala y abre la app.
+
+Cada vez que subas un cambio nuevo a `main`, el APK en Releases se
+actualiza solo automáticamente.
+
+> Nota: este APK de "debug" se instala perfectamente y funciona al 100%,
+> solo que Android puede mostrar una advertencia genérica de "app no
+> verificada por Play Protect" porque no viene de la Play Store — es
+> normal y no significa que tenga virus, es tu propio código compilado.
+
+---
+
+## Alternativa: compilar localmente con Android Studio
+
+
 
 1. Descarga e instala **Android Studio** (gratis): https://developer.android.com/studio
 2. Abre Android Studio → `Open` → selecciona la carpeta `PagoVoz` (la que

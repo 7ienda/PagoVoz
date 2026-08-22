@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_primary"
+            android:title="Ajustes"
+            android:titleTextColor="#FFFFFF" />
+
+        <!-- PERMISOS CRÍTICOS -->
+        <TextView style="@style/SettingsSectionTitle" android:text="Permisos necesarios" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNotifAccess"
+            style="@style/SettingsButton"
+            android:text="Activar acceso a notificaciones" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOverlayAccess"
+            style="@style/SettingsButton"
+            android:text="Permitir alerta flotante (mostrar sobre otras apps)" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBatteryOptimization"
+            style="@style/SettingsButton"
+            android:text="Desactivar optimización de batería" />
+
+        <!-- APPS A MONITOREAR -->
+        <TextView style="@style/SettingsSectionTitle" android:text="Apps a monitorear" />
+        <LinearLayout
+            android:id="@+id/containerAppsToggles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp" />
+
+        <!-- VOZ -->
+        <TextView style="@style/SettingsSectionTitle" android:text="Anuncio por voz" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchVoice"
+            style="@style/SettingsSwitch"
+            android:text="Anunciar pagos por voz" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchVibration"
+            style="@style/SettingsSwitch"
+            android:text="Vibrar al recibir un pago" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchOverlay"
+            style="@style/SettingsSwitch"
+            android:text="Mostrar tarjeta flotante en pantalla" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/SettingsInput"
+            android:hint="Frase del anuncio ({app} {monto} {nombre})">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTemplate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/SettingsInput"
+            android:hint="Monto mínimo para anunciar (S/)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMinAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- HORARIO SILENCIO -->
+        <TextView style="@style/SettingsSectionTitle" android:text="Horario silencioso" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchQuietHours"
+            style="@style/SettingsSwitch"
+            android:text="Activar horario sin anuncios de voz" />
+
+        <!-- SEGURIDAD -->
+        <TextView style="@style/SettingsSectionTitle" android:text="Seguridad" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchAppLock"
+            style="@style/SettingsSwitch"
+            android:text="Bloquear app con huella / PIN al abrir" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchDarkTheme"
+            style="@style/SettingsSwitch"
+            android:text="Tema oscuro" />
+
+        <!-- NEGOCIO -->
+        <TextView style="@style/SettingsSectionTitle" android:text="Mi negocio" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/SettingsInput"
+            android:hint="Nombre del negocio">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBusinessName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- DATOS -->
+        <TextView style="@style/SettingsSectionTitle" android:text="Datos" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExportCsv"
+            style="@style/SettingsButton"
+            android:text="Exportar historial (CSV / Excel)" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClearHistory"
+            style="@style/SettingsButtonOutline"
+            android:text="Borrar todo el historial" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            style="@style/SettingsButtonPrimary"
+            android:text="Guardar ajustes" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
